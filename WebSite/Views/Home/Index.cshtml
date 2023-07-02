@@ -1,6 +1,6 @@
 ﻿@{
-	ViewData[nameof(Resources.DataDictionary.Title)]
-		= Resources.InitialData.Pages.Home;
+	string title = Resources.InitialData.Pages.Home;
+	ViewData[nameof(Resources.DataDictionary.Title)] = title;
 }
 
 <div class="text-center">
@@ -20,7 +20,7 @@
 	<style>
 		h1 {
 			color: tomato;
-			font-size: 13px;
+			font-size: 31px;
 			font-weight: bold;
 		}
 	</style>
