@@ -4,7 +4,17 @@
 }
 
 <div class="text-center">
-	<h1>Home Page</h1>
+	
+	<h1>Wellcome to Home Page</h1>
+
+	<h3>
+		@{
+			string key = nameof(Resources.DataDictionary.FullName);
+		}
+
+		FullName In View Data: @(ViewData[key])
+	</h3>
+
 </div>
 
 @section Scripts {

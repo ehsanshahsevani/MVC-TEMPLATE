@@ -21,6 +21,20 @@ public class HomeController : Infrastructure.ApplicationControllers.BaseSiteCont
 
 	public IActionResult Index()
 	{
+		// ***********************************
+
+		string x = "ehsan shahsevani";
+
+		ViewData["FullName"] = x;
+
+		// ***********************************
+
+		string FullName = "ehsan shahsevani";
+
+		ViewData[nameof(FullName)] = FullName;
+
+		// ***********************************
+
 		return View();
 	}
 
