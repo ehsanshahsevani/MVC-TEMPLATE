@@ -3,7 +3,17 @@ using Infrastructure.Extensions;
 using Microsoft.AspNetCore.Identity;
 using System.Text.Json.Serialization;
 
-var builder = WebApplication.CreateBuilder(args);
+var webApplicationOptions =
+	new Microsoft.AspNetCore.Builder.WebApplicationOptions
+	{
+		EnvironmentName =
+			System.Diagnostics.Debugger.IsAttached ?
+			Microsoft.Extensions.Hosting.Environments.Development
+			:
+			Microsoft.Extensions.Hosting.Environments.Production,
+	};
+
+var builder = WebApplication.CreateBuilder(options: webApplicationOptions);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews()
