@@ -12,7 +12,7 @@ namespace Persistence.Settings
 	public static class ExtensionServices
 	{
 		// migrations settings
-		public static void AddConfigContext(this IServiceCollection services, string connectionString)
+		public static void AddDatabaseContextEntityFrameworkCore(this IServiceCollection services, string connectionString)
 		{
 			services.AddDbContext<Persistence.DatabaseContext>(opts =>
 			{
@@ -21,7 +21,7 @@ namespace Persistence.Settings
 		}
 
 		// identity micosoft settings
-		public static void AddConfigIdentity(this IServiceCollection services)
+		public static void AddIdentityMicrosoft(this IServiceCollection services)
 		{
 			services.AddAuthorizationCore(options =>
 			{

@@ -51,43 +51,43 @@ public static class ServiceExtensions
 		});
 	}
 
-	public static void ConfigureJWt(this IServiceCollection services, IConfiguration configuration)
-	{
-		var settings = new ApplicationSettings.JwtSettings();
-		configuration.GetSection(nameof(ApplicationSettings.JwtSettings)).Bind(settings);
+	//public static void ConfigureJWt(this IServiceCollection services, IConfiguration configuration)
+	//{
+	//	var settings = new ApplicationSettings.JwtSettings();
+	//	configuration.GetSection(nameof(ApplicationSettings.JwtSettings)).Bind(settings);
 
-		byte[] key =
-			Encoding.ASCII.GetBytes(s: settings.SecretKey!);
+	//	byte[] key =
+	//		Encoding.ASCII.GetBytes(s: settings.SecretKey!);
 
-		services.AddAuthentication(option =>
-		{
-			option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-			option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-		})
-		.AddJwtBearer(option =>
-		{
-			option.RequireHttpsMetadata = true;
-			option.SaveToken = true;
-			option.TokenValidationParameters = new TokenValidationParameters
-			{
-				ValidateIssuer = false,
-				ValidateAudience = false,
-				ValidateIssuerSigningKey = true,
+	//	services.AddAuthentication(option =>
+	//	{
+	//		option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+	//		option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+	//	})
+	//	.AddJwtBearer(option =>
+	//	{
+	//		option.RequireHttpsMetadata = true;
+	//		option.SaveToken = true;
+	//		option.TokenValidationParameters = new TokenValidationParameters
+	//		{
+	//			ValidateIssuer = false,
+	//			ValidateAudience = false,
+	//			ValidateIssuerSigningKey = true,
 
-				IssuerSigningKey =
-						new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(key: key),
+	//			IssuerSigningKey =
+	//					new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(key: key),
 
-				ClockSkew = System.TimeSpan.Zero,
+	//			ClockSkew = System.TimeSpan.Zero,
 
 
-				//ValidateIssuer = false,
-				//ValidateAudience = false,
-				//ValidateLifetime = true,
-				//ValidateIssuerSigningKey = true,
-				//// ValidIssuer = jwtSettings.GetSection("validIssuer").Value,
-				//// ValidAudience = jwtSettings.GetSection("validAudience").Value,
-			};
-		});
-	}
+	//			//ValidateIssuer = false,
+	//			//ValidateAudience = false,
+	//			//ValidateLifetime = true,
+	//			//ValidateIssuerSigningKey = true,
+	//			//// ValidIssuer = jwtSettings.GetSection("validIssuer").Value,
+	//			//// ValidAudience = jwtSettings.GetSection("validAudience").Value,
+	//		};
+	//	});
+	//}
 
 }

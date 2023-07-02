@@ -21,9 +21,11 @@ builder.Services.ConfigureCors();
 var connectionString =
 	builder.Configuration.GetConnectionString("LocalConnection")!;
 
-builder.Services.AddConfigContext(connectionString);
+builder.Services.AddDatabaseContextEntityFrameworkCore(connectionString);
+
 builder.Services.ConfigureUnitOfWork(builder.Configuration);
-builder.Services.AddConfigIdentity();
+
+builder.Services.AddIdentityMicrosoft();
 
 builder.Services.AddHttpClient();
 
