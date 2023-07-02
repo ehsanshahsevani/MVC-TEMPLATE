@@ -8,7 +8,7 @@ var webApplicationOptions =
 	{
 		EnvironmentName =
 			System.Diagnostics.Debugger.IsAttached ?
-			Microsoft.Extensions.Hosting.Environments.Development
+			Microsoft.Extensions.Hosting.Environments.Development 
 			:
 			Microsoft.Extensions.Hosting.Environments.Production,
 	};
