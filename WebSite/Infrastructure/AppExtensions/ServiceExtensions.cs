@@ -42,11 +42,9 @@ public static class ServiceExtensions
 						configuration.GetSection(key: "ConnectionStrings")
 						.GetSection(key: "LocalConnection").Value!;
 
-			Persistence.Tools.Options options =
-				new Persistence.Tools.Options(connectionString);
+			Persistence.Tools.Options options = new(connectionString);
 
-			Persistence.UnitOfWork unitOfWork =
-				new Persistence.UnitOfWork(options: options);
+			Persistence.UnitOfWork unitOfWork = new(options: options);
 
 			return unitOfWork;
 		});
