@@ -45,7 +45,8 @@ public static class ServiceExtensions
 			Persistence.Tools.Options options =
 				new Persistence.Tools.Options(connectionString);
 
-			Persistence.UnitOfWork unitOfWork = new Persistence.UnitOfWork(options: options);
+			Persistence.UnitOfWork unitOfWork =
+				new Persistence.UnitOfWork(options: options);
 
 			return unitOfWork;
 		});

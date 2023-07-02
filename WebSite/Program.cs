@@ -1,9 +1,7 @@
 using Persistence.Settings;
-
 using Infrastructure.Extensions;
-using System.Text.Json.Serialization;
-using Infrastructure.Middelwares;
 using Microsoft.AspNetCore.Identity;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
