@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActionPlaceHasTicketError" xml:space="preserve">
+    <value>این مکان اقدام دارای گزارشاتی میباشد و حذف آن امکان پذیر نیست</value>
+  </data>
+  <data name="ActionPlaceIsNull" xml:space="preserve">
+    <value>مکان اقدامی وجود ندارد</value>
+  </data>
+  <data name="ActionPlaceNameRequired" xml:space="preserve">
+    <value>نام مکان اقدام اجباری میباشد</value>
+  </data>
+  <data name="ActionPlaceNotFound" xml:space="preserve">
+    <value>مکان اقدام مورد نظر یافت نشد</value>
+  </data>
+  <data name="ActionPlaceSelectError" xml:space="preserve">
+    <value>هیچ مکان اقدامی انتخاب نشده است</value>
+  </data>
+  <data name="ActionTypeHasTicketError" xml:space="preserve">
+    <value>این نوع اقدام دارای گزارشاتی میباشد و حذف آن امکان پذیر یست</value>
+  </data>
+  <data name="ActionTypeIsNull" xml:space="preserve">
+    <value>نوع اقدامی وجود ندارد</value>
+  </data>
+  <data name="ActionTypeNameRequired" xml:space="preserve">
+    <value>نام نوع اقدام اجباری میباشد</value>
+  </data>
+  <data name="ActionTypeNotFound" xml:space="preserve">
+    <value>نوع اقدام یافت نشد</value>
+  </data>
+  <data name="ActionTypeSelectedError" xml:space="preserve">
+    <value>لطفا نوع اقدام را وارد کنید</value>
+  </data>
+  <data name="AlbumSelect" xml:space="preserve">
+    <value>لطفا آلبوم مربوطه را انتخاب نمایید !</value>
+  </data>
+  <data name="AnswerChangeStatusTicket" xml:space="preserve">
+    <value>وضعیت تیکت شما با شماره {0}، از حالت '{1}' به حالت '{2}'، توسط ( {3} ) تغییر یافت.</value>
+  </data>
+  <data name="AnswerForThisReferenceNotFound" xml:space="preserve">
+    <value>پاسخی برای این ارجاع یافت نشد</value>
+  </data>
+  <data name="AttachFormat" xml:space="preserve">
+    <value>لطفا فایل با فرمت .zip ,  .pdf , .rtf , .doc ,یا  .docx وارد نمایید !</value>
+  </data>
+  <data name="CategoryNameRequired" xml:space="preserve">
+    <value>عنوان موضوع اجباری میباشد</value>
+  </data>
+  <data name="CategoryNotFound" xml:space="preserve">
+    <value>موضوعی یافت نشد</value>
+  </data>
+  <data name="CategorySelectedError" xml:space="preserve">
+    <value>هیچ موضوعی انتخاب نشده است</value>
+  </data>
+  <data name="CompanyIsDeleted" xml:space="preserve">
+    <value>شرکت مورد نظر با موفقیت حذف شد</value>
+  </data>
+  <data name="CreateDateFormat" xml:space="preserve">
+    <value>فرمت تاریخ شروع را چک کنید</value>
+  </data>
+  <data name="CustomerExpiredError" xml:space="preserve">
+    <value>مهلت تاریخ شرکت شما به اتمام رسیده است لطفا با شرکت هماهنگ کنید</value>
+  </data>
+  <data name="CustomerHasMappingError" xml:space="preserve">
+    <value>برای حذف شرکت مورد نظر ابتدا ارتباطات گروه ها را چک کنید</value>
+  </data>
+  <data name="CustomerHasprojectError" xml:space="preserve">
+    <value>برای حذف یک شرکت ابتدا پروژه های آنرا حذف کنید</value>
+  </data>
+  <data name="CustomerHasUserError" xml:space="preserve">
+    <value>برای حذف یک شرکت ابتدا کاربران آن را حذف کنید</value>
+  </data>
+  <data name="CustomerNotActiveError" xml:space="preserve">
+    <value>شرکت مورد نظر فعال نیست لطفا با شرکت هماهنگ فرمایید</value>
+  </data>
+  <data name="CustomerNotExist" xml:space="preserve">
+    <value>شرکتی وجود ندارد</value>
+  </data>
+  <data name="CustomerNotFound" xml:space="preserve">
+    <value>هیچ شرکتی یافت نشد</value>
+  </data>
+  <data name="CustomerOrCompanyIsNull" xml:space="preserve">
+    <value>مشتری / شرکت وجود ندارد</value>
+  </data>
+  <data name="CustomerSelectedError" xml:space="preserve">
+    <value>هیچ شرکتی انتخاب نشده است</value>
+  </data>
+  <data name="DateConflictError" xml:space="preserve">
+    <value>تداخل تاریخ وجود دارد</value>
+  </data>
+  <data name="DateFormat" xml:space="preserve">
+    <value>فرمت تاریخ نامعتبر !</value>
+  </data>
+  <data name="DateOfOperation" xml:space="preserve">
+    <value>تاریخ انجام کار وارد نشده است</value>
+  </data>
+  <data name="DescriptionIsRequired" xml:space="preserve">
+    <value>توضیحات / شرح اجباری میباشد</value>
+  </data>
+  <data name="DigitFormat" xml:space="preserve">
+    <value>لطفا فیلدهای عددی را صحیح وارد نمایید</value>
+  </data>
+  <data name="EditError" xml:space="preserve">
+    <value>خطا در ذخیره تغییرات !</value>
+  </data>
+  <data name="EditSuccess" xml:space="preserve">
+    <value>ذخیره تغییرات با موفقیت انجام شد .</value>
+  </data>
+  <data name="EmailFormat" xml:space="preserve">
+    <value>فرمت پست الکترونیک را صحیح وارد نمایید</value>
+  </data>
+  <data name="EmailHelp" xml:space="preserve">
+    <value>بعد از تکمیل اطلاعات خواسته شده و انتخاب دریافت کننده مناسب  دکمه ارسال را کلیک کنید</value>
+  </data>
+  <data name="EmpttyTitle" xml:space="preserve">
+    <value>لطفا عنوان مورد نظر را وارد نمائید!</value>
+  </data>
+  <data name="EmptyAnswer" xml:space="preserve">
+    <value>شما هیچ پاسخی برای سوال خود وارد نکرده اید !</value>
+  </data>
+  <data name="EmptyEmail" xml:space="preserve">
+    <value>لطفا پست الکترونیک خود را وارد نمایید !</value>
+  </data>
+  <data name="EmptyFields" xml:space="preserve">
+    <value>لطفا رشته را وارد نمایید !</value>
+  </data>
+  <data name="EmptyFile" xml:space="preserve">
+    <value>لطفا فایل مورد نظر را انتخاب نمایید !</value>
+  </data>
+  <data name="Emptyheight" xml:space="preserve">
+    <value>ارتفاع را وارد کنید!</value>
+  </data>
+  <data name="EmptyLesson" xml:space="preserve">
+    <value>لطفا درس را وارد نمایید !</value>
+  </data>
+  <data name="EmptyPoll" xml:space="preserve">
+    <value>لطفا جهت ارسال نظر گزینه ای را انتخاب نمایید! </value>
+  </data>
+  <data name="EmptyQuestion" xml:space="preserve">
+    <value>لطفا سوال خود را وارد نمایید !</value>
+  </data>
+  <data name="EmptySection" xml:space="preserve">
+    <value>لطفا نام قسمت را وارد نمایید !</value>
+  </data>
+  <data name="EmptyText" xml:space="preserve">
+    <value>لطفا متن را وارد نمایید !</value>
+  </data>
+  <data name="EmptyTitle" xml:space="preserve">
+    <value>لطفا عنوان را وارد نمایید !</value>
+  </data>
+  <data name="EmptyUniversity" xml:space="preserve">
+    <value>لطفا دانشگاه را وارد نمایید !</value>
+  </data>
+  <data name="EmptyWidth" xml:space="preserve">
+    <value>عرض را وارد کنید!</value>
+  </data>
+  <data name="ErrorLogin" xml:space="preserve">
+    <value>نام کاربری و یا رمز عبور اشتباه وارد شده است لطفا دوباره تلاش کنید !</value>
+  </data>
+  <data name="ExpireDateFormat" xml:space="preserve">
+    <value>فرمت تاریخ پایان را چک کنید</value>
+  </data>
+  <data name="FamilyEmpty" xml:space="preserve">
+    <value>لطفا نام خانوادگی را وارد نمایید</value>
+  </data>
+  <data name="FAQCategorySelectedError" xml:space="preserve">
+    <value>موضوع پایگاه دانش را انتخاب کنید</value>
+  </data>
+  <data name="FAQIsNull" xml:space="preserve">
+    <value>هیچ مطلبی در پایگاه دانش ثبت نشده است</value>
+  </data>
+  <data name="FAQNotFoundError" xml:space="preserve">
+    <value>پایگاه دانش مورد نظر یافت نشد</value>
+  </data>
+  <data name="File1MBError" xml:space="preserve">
+    <value>حداکثر حجم مجاز برای آپلود 1 مگابایت میباشد</value>
+  </data>
+  <data name="FileEmpty" xml:space="preserve">
+    <value>لطفا فایل را انتخاب نمایید!</value>
+  </data>
+  <data name="FileError_SelectNewFile" xml:space="preserve">
+    <value>بروز خطا، لطفا فایل جدیدی را تست کنید</value>
+  </data>
+  <data name="FileExtensionError" xml:space="preserve">
+    <value>پسوند فایل مورد نظر مورد تایید نمیباشد</value>
+  </data>
+  <data name="FileSelect" xml:space="preserve">
+    <value>فایل مورد نظر را انتخاب کنید</value>
+  </data>
+  <data name="FindUserIdFailed" xml:space="preserve">
+    <value>کاربر مورد نظر یافت نشد</value>
+  </data>
+  <data name="GifOnly" xml:space="preserve">
+    <value>شما می بایست فایلی با فرمت gif وارد کنید !</value>
+  </data>
+  <data name="GroupEmpty" xml:space="preserve">
+    <value>لطفا گروه را وارد کنید</value>
+  </data>
+  <data name="GroupHasMappingError" xml:space="preserve">
+    <value>برای حذف یک گروه ابتدا ارتباطات آن گروه را حذف کنید</value>
+  </data>
+  <data name="GroupHasUserError" xml:space="preserve">
+    <value>امکان حذف گروهی که شامل تعدادی کاربر میباشد نیست</value>
+  </data>
+  <data name="GroupIsNull" xml:space="preserve">
+    <value>گروهی وجود ندارد</value>
+  </data>
+  <data name="GroupNotExist" xml:space="preserve">
+    <value>گروهی وجود ندارد</value>
+  </data>
+  <data name="GroupNotFound" xml:space="preserve">
+    <value>گروه مورد نظر یافت نشد</value>
+  </data>
+  <data name="GroupRelationIsNull" xml:space="preserve">
+    <value>رابطه ای بین گروه ها وجود ندارد</value>
+  </data>
+  <data name="GroupSelectError" xml:space="preserve">
+    <value>گروهی انتخاب نشده است</value>
+  </data>
+  <data name="ImgFormat" xml:space="preserve">
+    <value> شما می بایست فایلی با فرمت gif, jpg , jpeg ویا bmp وارد کنید !</value>
+  </data>
+  <data name="ImgSize" xml:space="preserve">
+    <value>سایز فایل بزرگ می باشد</value>
+  </data>
+  <data name="ItemNotFound" xml:space="preserve">
+    <value>آیتم مورد نظر یافت نشد</value>
+  </data>
+  <data name="LastNameRequired" xml:space="preserve">
+    <value>نام خانوادگی اجباری میباشد</value>
+  </data>
+  <data name="LinkFormat" xml:space="preserve">
+    <value>فرمت لینک وارد شده نامعتبر است !</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>لطفا کمی صبر کنید</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>نام کاربری و یا رمز عبور اشتباه وارد شده است !</value>
+  </data>
+  <data name="LogOutFromAccount" xml:space="preserve">
+    <value>خروج از حساب کاربری</value>
+  </data>
+  <data name="MappingNotFound" xml:space="preserve">
+    <value>هیچ مسیری برای ارجاع این تیکت یافت نشد</value>
+  </data>
+  <data name="MappingOwnerCompanyNotFound" xml:space="preserve">
+    <value>تیکت مورد نظر نمیتواند به شرکت مالک ارجاع شود</value>
+  </data>
+  <data name="MaximumSize1MB" xml:space="preserve">
+    <value>حداکثر حجم فایل ها 1 مگابایت</value>
+  </data>
+  <data name="MaxSize500000" xml:space="preserve">
+    <value>سایز فایل می بایست کمتر از 500000 بایت باشد !</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>لطفا پیام خود را وارد نمایید!</value>
+  </data>
+  <data name="MinTicketCountError" xml:space="preserve">
+    <value>بیشترین حد ارسال تیکت نمیتواند 0 باشد</value>
+  </data>
+  <data name="MobileError" xml:space="preserve">
+    <value>شماره تلفن همراه را بررسی کنید</value>
+  </data>
+  <data name="NameRequired" xml:space="preserve">
+    <value>نام اجباری است</value>
+  </data>
+  <data name="NationalCodeError" xml:space="preserve">
+    <value>کد ملی را چک کنید</value>
+  </data>
+  <data name="NotAccessToAdminGroup" xml:space="preserve">
+    <value>شما به گروه مدیریت دسترسی ندارید</value>
+  </data>
+  <data name="NotAccessToPageConnectToCompany" xml:space="preserve">
+    <value>محدودیت در سطح دسترسی، لطفا با شرکت هماهنگ کنید</value>
+  </data>
+  <data name="NumberRange" xml:space="preserve">
+    <value>عدد وارد شده در محدوده مجاز نمی باشد</value>
+  </data>
+  <data name="PasswordConfirmRequired" xml:space="preserve">
+    <value>تکرار رمز عبور اجباری است</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>رمزعبور اجباری است</value>
+  </data>
+  <data name="Password_PasswordConfirmError" xml:space="preserve">
+    <value>رمز عبور و تکرار رمز عبور یکسان نیست</value>
+  </data>
+  <data name="PhoneError" xml:space="preserve">
+    <value>شماره تلفن را بررسی کنید</value>
+  </data>
+  <data name="PleaseLoginInSite" xml:space="preserve">
+    <value>برای استفاده از سایت ابتدا وارد حساب کاربری خود شوید</value>
+  </data>
+  <data name="PostEmpty" xml:space="preserve">
+    <value>لطفا سمت را وارد نمایید !</value>
+  </data>
+  <data name="ProjectHasGroup" xml:space="preserve">
+    <value>برای حذف پروژه ابتدا گروه های مورد نظر را حذف کنید</value>
+  </data>
+  <data name="ProjectHasMapping" xml:space="preserve">
+    <value>برای حذف پروژه ابتدا ارتباطات گروه های آنرا حذف کنید</value>
+  </data>
+  <data name="ProjectHasSubSystemError" xml:space="preserve">
+    <value>برای حذف یک پروژه ابتدا زیر سیستم های آنرا حدف کنید</value>
+  </data>
+  <data name="ProjectIsNull" xml:space="preserve">
+    <value>پروژه ای وجود ندارد</value>
+  </data>
+  <data name="ProjectNameRequired" xml:space="preserve">
+    <value>نام پروژه اجباری میباشد</value>
+  </data>
+  <data name="ProjectNotExist" xml:space="preserve">
+    <value>هیچ پروژه ای وجود ندارد</value>
+  </data>
+  <data name="ProjectNotFound" xml:space="preserve">
+    <value>پروژه مورد نظر یافت نشد</value>
+  </data>
+  <data name="ProjectSelectedError" xml:space="preserve">
+    <value>هیچ پروژه ای انتخاب نشده است</value>
+  </data>
+  <data name="QuestionDelete" xml:space="preserve">
+    <value>آیا مایل به حذف رکورد مورد نظر هستید؟</value>
+  </data>
+  <data name="QuestionEmpty" xml:space="preserve">
+    <value>لطفا متن پرسش را وارد کنید</value>
+  </data>
+  <data name="QuestionUpdate" xml:space="preserve">
+    <value>آیا مایل به ثبت تغییرات هستید؟</value>
+  </data>
+  <data name="QueueSentTicketIsFull" xml:space="preserve">
+    <value>میزان صف ارسال تیکت شما به شرکت پر شده است لطفا با شرکت هماهنگ کنین</value>
+  </data>
+  <data name="RangNo1000" xml:space="preserve">
+    <value>لطفا عددی در محدوده 0 تا 1000 وارد نمایید !</value>
+  </data>
+  <data name="RangUnit" xml:space="preserve">
+    <value>لطفا عددی بین 0 تا 10 را وارد نمایید !</value>
+  </data>
+  <data name="ReferenceIsSeccess" xml:space="preserve">
+    <value>ارجاع با موفقیت انجام شد</value>
+  </data>
+  <data name="ReferenceTicketWithSaveAnswer" xml:space="preserve">
+    <value>ارجاع کردن و ثبت پاسخ</value>
+  </data>
+  <data name="ReportIsDeleted" xml:space="preserve">
+    <value>گزارش مورد نظر با موفقیت حذف شد</value>
+  </data>
+  <data name="ReportIsNull" xml:space="preserve">
+    <value>گزارشی وجود ندارد</value>
+  </data>
+  <data name="ReportNotFound" xml:space="preserve">
+    <value>گزارش مورد نظر یافت نشد</value>
+  </data>
+  <data name="RequestNotValid" xml:space="preserve">
+    <value>درخواست شما نامعتبر میباشد</value>
+  </data>
+  <data name="RoleNameRequired" xml:space="preserve">
+    <value>نام نقش اجباری میباشد</value>
+  </data>
+  <data name="RoleNotExist" xml:space="preserve">
+    <value>نقشی وجود ندارد</value>
+  </data>
+  <data name="RoleNotFound" xml:space="preserve">
+    <value>نقش مود نظر یافت نشد</value>
+  </data>
+  <data name="RoleSelectedError" xml:space="preserve">
+    <value>لطفا یک نقش را انتخاب کنید</value>
+  </data>
+  <data name="RoleTitleRequired" xml:space="preserve">
+    <value>عنوان فارسی نقش اجباری میباشد</value>
+  </data>
+  <data name="SaveError" xml:space="preserve">
+    <value>خطا در ذخیره اطلاعات !</value>
+  </data>
+  <data name="SaveSuccess" xml:space="preserve">
+    <value>ذخیره اطلاعات با موفقیت انجام شد .</value>
+  </data>
+  <data name="SaveTicketToReport" xml:space="preserve">
+    <value>ثبت به عنوان گزارش</value>
+  </data>
+  <data name="SaveTicketWhenCountFAQZiro" xml:space="preserve">
+    <value>در صورت مشاده نکردن مورد خود میتوانید تیکت ثبت کنید</value>
+  </data>
+  <data name="SearchInFAQ" xml:space="preserve">
+    <value>جستجو در پایگاه دانش</value>
+  </data>
+  <data name="SearchResultIsNull" xml:space="preserve">
+    <value>نتیجه ای یافت نشد</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>انتخاب همه</value>
+  </data>
+  <data name="SelectedCategoryError" xml:space="preserve">
+    <value>لطفا یک موضوع را انتخاب کنید</value>
+  </data>
+  <data name="SelectedSubSystemError" xml:space="preserve">
+    <value>لطفا یک زیر سیستم انتخاب کنید</value>
+  </data>
+  <data name="SelectedUserPriotryError" xml:space="preserve">
+    <value>لطفا یک اولویت را انتخاب کنید</value>
+  </data>
+  <data name="SelectItem" xml:space="preserve">
+    <value>انتخاب کنید</value>
+  </data>
+  <data name="SelectSubSystemOrProjectError" xml:space="preserve">
+    <value>انتخاب زیر سیستم یا پروژه اجباری میباشد</value>
+  </data>
+  <data name="SelectTrueOptionUsers" xml:space="preserve">
+    <value>از بین افراد مورد های مورد نظر را انتخاب کنید</value>
+  </data>
+  <data name="SelectUserGroupProjectOrUserFromProjectSelected" xml:space="preserve">
+    <value>انتخاب گروه یا یک شخص در یک گروه اجباری میباشد</value>
+  </data>
+  <data name="ServerReqestError" xml:space="preserve">
+    <value>خطا در پاسخ به درخواست</value>
+  </data>
+  <data name="ShowProfilePage" xml:space="preserve">
+    <value>نمایش پروفایل</value>
+  </data>
+  <data name="SiteTitle" xml:space="preserve">
+    <value>لطفا عنوان سایت را وارد نمایید</value>
+  </data>
+  <data name="StatusTicketNotFound" xml:space="preserve">
+    <value>وضعیت تیکت مورد نظر یافت نشد</value>
+  </data>
+  <data name="SubSystemHasTicketError" xml:space="preserve">
+    <value>امکان حذف زیر سیستم هایی که تیکت برایشان ثبت شده است نیست</value>
+  </data>
+  <data name="SubSystemIsNull" xml:space="preserve">
+    <value>زیر سیستمی وجود ندارد</value>
+  </data>
+  <data name="SubSystemNameRequired" xml:space="preserve">
+    <value>نام زیرسیستم اجباری میباشد</value>
+  </data>
+  <data name="SubSystemNotExist" xml:space="preserve">
+    <value>زیر سیستمی وجود ندارد</value>
+  </data>
+  <data name="SubSystemNotFound" xml:space="preserve">
+    <value>زیر سیستمی یافت نشد</value>
+  </data>
+  <data name="SubsystemSelectedError" xml:space="preserve">
+    <value>هیچ زیرسیستمی انتخاب نشده است</value>
+  </data>
+  <data name="SuccessLoginMessage" xml:space="preserve">
+    <value>با موفقیت وارد حساب کاربری خود شدید</value>
+  </data>
+  <data name="SupportManagmentGroupInCustomerNotFound" xml:space="preserve">
+    <value>گروه مدیریت سازمان یافت نشد / بروز خطا در سیستم</value>
+  </data>
+  <data name="SystemError" xml:space="preserve">
+    <value>بروز خطا در سیستم</value>
+  </data>
+  <data name="SystemErrorReLogin" xml:space="preserve">
+    <value>بروز خطا در سیستم / مجدد وارد حساب کاربری شوید و تلاش کنید</value>
+  </data>
+  <data name="SystemError_TryAgain" xml:space="preserve">
+    <value>بروز خطا در سیستم، مجدد تلاش کنید</value>
+  </data>
+  <data name="TextFormat" xml:space="preserve">
+    <value>لطفا فایل با فرمت  .pdf  , .doc ,یا  .docx وارد نمایید !</value>
+  </data>
+  <data name="ThisNameIsExist" xml:space="preserve">
+    <value>نام مورد نظر در سامانه وجود دارد.</value>
+  </data>
+  <data name="ThisRelationIsExist" xml:space="preserve">
+    <value>این ارتباط وجود دارد</value>
+  </data>
+  <data name="TicketNotFound" xml:space="preserve">
+    <value>تیکت مورد نظر یافت نشد</value>
+  </data>
+  <data name="TicketReferenceForTicketNotSet" xml:space="preserve">
+    <value>هیچ مسیری برای ارجاع تیکت مورد نظر با پروژه و زیر سیستم مد نظر شما یافت نشد لطفا با تیم پشتیبانی هماهنگ کنید</value>
+  </data>
+  <data name="TicketReferenceNotExist" xml:space="preserve">
+    <value>پیشفرض ارجاعاتی وجود ندارد</value>
+  </data>
+  <data name="TicketTypeIsRequired" xml:space="preserve">
+    <value>نوع تیکت اجباری میباشد</value>
+  </data>
+  <data name="TicketTypeNotFound" xml:space="preserve">
+    <value>نوع تیکت مورد نظر یافت نشد</value>
+  </data>
+  <data name="TimeOfOperation" xml:space="preserve">
+    <value>زمان انجام کار وارد نشده است</value>
+  </data>
+  <data name="TitleIsRequired" xml:space="preserve">
+    <value>عنوان اجباری است</value>
+  </data>
+  <data name="UseCustomers" xml:space="preserve">
+    <value>مشتری های درحال استفاده</value>
+  </data>
+  <data name="Useprojects" xml:space="preserve">
+    <value>پروژه های درحال استفاده</value>
+  </data>
+  <data name="UserAddedInListGroup" xml:space="preserve">
+    <value>کاربران افزوده شده</value>
+  </data>
+  <data name="UserExistInGroup" xml:space="preserve">
+    <value>کاربر مورد نظر در این گروه وجود دارد</value>
+  </data>
+  <data name="UserExpiredError" xml:space="preserve">
+    <value>جهت ورود با این حساب کاربری با شرکت تماس بگیرید</value>
+  </data>
+  <data name="UserGroupProjectNotFound" xml:space="preserve">
+    <value>هیچ ارتباطی برای شخص و گروه مورد نظر یافت نشد</value>
+  </data>
+  <data name="UserGroupProjectSelectError" xml:space="preserve">
+    <value>لطفا یک شخص با گروه مشخص شده انتخاب کنید</value>
+  </data>
+  <data name="UserHasTicketError" xml:space="preserve">
+    <value>امکان حذف افرادی که تیکت ارسال کرده اند نیست</value>
+  </data>
+  <data name="UserNameIsExistError" xml:space="preserve">
+    <value>نام کاربری مورد نظر تکراری است</value>
+  </data>
+  <data name="UserNameRequied" xml:space="preserve">
+    <value>نام کاربری اجباری است</value>
+  </data>
+  <data name="UserNotActiveError" xml:space="preserve">
+    <value>کاربر مورد نظر فعال نمیباشد</value>
+  </data>
+  <data name="UserNotExist" xml:space="preserve">
+    <value>کاربری وجود ندارد</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>کاربر مورد نظر یافت نشد</value>
+  </data>
+  <data name="UserPriotryIsRequired" xml:space="preserve">
+    <value>اولویت کاربر اجباری میباشد</value>
+  </data>
+  <data name="UserPriotryNotFound" xml:space="preserve">
+    <value>اولیت کاربر مورد نظر یافت نشد</value>
+  </data>
+  <data name="UserPriotryNotSelected" xml:space="preserve">
+    <value>اولویت کاربر را انتخاب کنید</value>
+  </data>
+  <data name="UserSelectedCustomer" xml:space="preserve">
+    <value>کاربران شرکت مورد نظر</value>
+  </data>
+  <data name="UserWithGroupHasTicketReferenceError" xml:space="preserve">
+    <value>امکان حذف کاربری که در صفحه پیش فرض ارجاعات انتخاب شده است نمیباشد</value>
+  </data>
+  <data name="ViewOnTheMainPage" xml:space="preserve">
+    <value>در صفحه اصلی مشاهده شود</value>
+  </data>
+  <data name="YourAnswerToTicket" xml:space="preserve">
+    <value>پاسخ شما به تیکت</value>
+  </data>
+</root>
