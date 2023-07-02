@@ -8,7 +8,8 @@ using Microsoft.AspNetCore.Identity;
 
 namespace WebSite.Controllers;
 
-public class HomeController : Infrastructure.ApplicationControllers.BaseSiteController
+public class HomeController
+	: Infrastructure.ApplicationControllers.BaseSiteController
 {
 	public HomeController(IUnitOfWork unitOfWork, IMapper mapper,
 		IConfiguration configuration, IWebHostEnvironment env, HttpClient httpClient,
