@@ -15,78 +15,78 @@ namespace Infrastructure;
 
 public static class ServiceExtensionsMethodes
 {
-    public static void ConfigureCors(this IServiceCollection service)
-        =>
-        service.AddCors(option =>
-        {
-            option.AddPolicy("CorsPolicy", builder =>
-            builder.AllowAnyOrigin()    // WithOrgin("https://shahsevaniehsan.ir")
-                   .AllowAnyMethod()    // WithMethodes("get;", Post)
-                   .AllowAnyHeader()    // WithHeaders("accept", "contenttype")
-                   );
-        });
+	public static void ConfigureCors(this IServiceCollection service)
+		=>
+		service.AddCors(option =>
+		{
+			option.AddPolicy("CorsPolicy", builder =>
+			builder.AllowAnyOrigin()    // WithOrgin("https://shahsevaniehsan.ir")
+				   .AllowAnyMethod()    // WithMethodes("get;", Post)
+				   .AllowAnyHeader()    // WithHeaders("accept", "contenttype")
+				   );
+		});
 
-    public static void ConfigureIISIntegration(this IServiceCollection services)
-        =>
-        services.Configure<IISOptions>(option =>
-        {
-        });
+	public static void ConfigureIISIntegration(this IServiceCollection services)
+		=>
+		services.Configure<IISOptions>(option =>
+		{
+		});
 
-    // configure Unit Of Work
-    public static void ConfigureUnitOfWork(this IServiceCollection services,
-        IConfiguration configuration)
-    {
-        services.AddScoped<Persistence.IUnitOfWork, Persistence.UnitOfWork>(sp =>
-        {
-            string connectionString =
-                        configuration.GetSection(key: "ConnectionStrings")
-                        .GetSection(key: "LocalConnection").Value!;
+	// configure Unit Of Work
+	public static void ConfigureUnitOfWork(this IServiceCollection services,
+		IConfiguration configuration)
+	{
+		services.AddScoped<Persistence.IUnitOfWork, Persistence.UnitOfWork>(sp =>
+		{
+			string connectionString =
+						configuration.GetSection(key: "ConnectionStrings")
+						.GetSection(key: "LocalConnection").Value!;
 
-            Persistence.Tools.Options options = new(connectionString);
+			Persistence.Tools.Options options = new(connectionString);
 
-            Persistence.UnitOfWork unitOfWork = new(options: options);
+			Persistence.UnitOfWork unitOfWork = new(options: options);
 
-            return unitOfWork;
-        });
-    }
+			return unitOfWork;
+		});
+	}
 
-    //public static void ConfigureJWt(this IServiceCollection services, IConfiguration configuration)
-    //{
-    //	var settings = new ApplicationSettings.JwtSettings();
-    //	configuration.GetSection(nameof(ApplicationSettings.JwtSettings)).Bind(settings);
+	//public static void ConfigureJWt(this IServiceCollection services, IConfiguration configuration)
+	//{
+	//	var settings = new ApplicationSettings.JwtSettings();
+	//	configuration.GetSection(nameof(ApplicationSettings.JwtSettings)).Bind(settings);
 
-    //	byte[] key =
-    //		Encoding.ASCII.GetBytes(s: settings.SecretKey!);
+	//	byte[] key =
+	//		Encoding.ASCII.GetBytes(s: settings.SecretKey!);
 
-    //	services.AddAuthentication(option =>
-    //	{
-    //		option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    //		option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-    //	})
-    //	.AddJwtBearer(option =>
-    //	{
-    //		option.RequireHttpsMetadata = true;
-    //		option.SaveToken = true;
-    //		option.TokenValidationParameters = new TokenValidationParameters
-    //		{
-    //			ValidateIssuer = false,
-    //			ValidateAudience = false,
-    //			ValidateIssuerSigningKey = true,
+	//	services.AddAuthentication(option =>
+	//	{
+	//		option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+	//		option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+	//	})
+	//	.AddJwtBearer(option =>
+	//	{
+	//		option.RequireHttpsMetadata = true;
+	//		option.SaveToken = true;
+	//		option.TokenValidationParameters = new TokenValidationParameters
+	//		{
+	//			ValidateIssuer = false,
+	//			ValidateAudience = false,
+	//			ValidateIssuerSigningKey = true,
 
-    //			IssuerSigningKey =
-    //					new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(key: key),
+	//			IssuerSigningKey =
+	//					new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(key: key),
 
-    //			ClockSkew = System.TimeSpan.Zero,
+	//			ClockSkew = System.TimeSpan.Zero,
 
 
-    //			//ValidateIssuer = false,
-    //			//ValidateAudience = false,
-    //			//ValidateLifetime = true,
-    //			//ValidateIssuerSigningKey = true,
-    //			//// ValidIssuer = jwtSettings.GetSection("validIssuer").Value,
-    //			//// ValidAudience = jwtSettings.GetSection("validAudience").Value,
-    //		};
-    //	});
-    //}
+	//			//ValidateIssuer = false,
+	//			//ValidateAudience = false,
+	//			//ValidateLifetime = true,
+	//			//ValidateIssuerSigningKey = true,
+	//			//// ValidIssuer = jwtSettings.GetSection("validIssuer").Value,
+	//			//// ValidAudience = jwtSettings.GetSection("validAudience").Value,
+	//		};
+	//	});
+	//}
 
 }
