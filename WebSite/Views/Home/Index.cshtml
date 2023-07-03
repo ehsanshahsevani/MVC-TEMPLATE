@@ -1,5 +1,7 @@
 ﻿@{
-	string title = Resources.InitialData.Pages.Home;
+	string title =
+		Resources.InitialData.Pages.Home;
+
 	ViewData[nameof(Resources.DataDictionary.Title)] = title;
 }
 
@@ -7,12 +9,12 @@
 	
 	<h1>Wellcome to [ Home ] Page</h1>
 
-	<h3>
+	<h3 class="text-danger">
 		@{
-			string key = nameof(Resources.DataDictionary.FullName);
+			string? value = ViewData["Test"] as string;
 		}
 
-		FullName In View Data: @( ViewData[key] )
+		Text Data In View Data: <span class="text-dark">'@(value)'</span>
 	</h3>
 
 </div>
@@ -21,7 +23,6 @@
 
 	<style>
 		h1 {
-			color: tomato;
 			font-size: 31px;
 			font-weight: bold;
 		}

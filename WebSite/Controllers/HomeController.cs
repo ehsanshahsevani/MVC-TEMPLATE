@@ -5,6 +5,7 @@ using WebSite.Models;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebSite.Controllers;
 
@@ -24,17 +25,17 @@ public class HomeController
 	{
 		// ***********************************
 
-		string x = "ehsan shahsevani";
+		string x = "Test Data Number 1";
 
-		ViewData["FullName"] = x;
-
-		// ***********************************
+		ViewData["Test"] = x;
 
 		// ***********************************
 
-		string FullName = "ehsan shahsevani";
+		// ***********************************
 
-		ViewData[nameof(FullName)] = FullName;
+		string Test = "Test Data";
+
+		ViewData[nameof(Test)] = Test;
 
 		// ***********************************
 

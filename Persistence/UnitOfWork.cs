@@ -49,24 +49,6 @@ public class UnitOfWork : Base.UnitOfWork, IUnitOfWork
 	// **************************************************
 
 	// **************************************************
-	private IClientLogRepository _ClientLogRepository;
-
-	public IClientLogRepository ClientLogRepository
-	{
-		get
-		{
-			if (_ClientLogRepository == null)
-			{
-				_ClientLogRepository =
-					new ClientLogRepository(DatabaseContext);
-			}
-
-			return _ClientLogRepository;
-		}
-	}
-	// **************************************************
-
-	// **************************************************
 	private IServerLogRepository _ServerLogRepository;
 
 	public IServerLogRepository ServerLogRepository

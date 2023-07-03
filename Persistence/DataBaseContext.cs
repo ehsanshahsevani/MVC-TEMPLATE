@@ -19,7 +19,6 @@ internal class DatabaseContext : IdentityDbContext<Domain.User, Domain.Role, int
 
 	#region All DbSets
 	public DbSet<Domain.Post> Posts { get; set; }
-	public DbSet<Domain.ClientLog> ClientLogs { get; set; }
 	public DbSet<Domain.DetailsLog> DetailsLogs { get; set; }
 	public DbSet<Domain.ServerLog> ServerLogs { get; set; }
 	#endregion

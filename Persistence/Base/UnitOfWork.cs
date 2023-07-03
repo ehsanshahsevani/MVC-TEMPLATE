@@ -180,7 +180,6 @@ public abstract class UnitOfWork : IUnitOfWork
 			detailsLog.TypeName = item.Entity.GetType().Name;
 
 			if (string.IsNullOrEmpty(detailsLog.TypeName) == false
-				&& detailsLog.TypeName != $"{nameof(ClientLog)}"
 				&& detailsLog.TypeName != $"{nameof(ServerLog)}"
 				&& detailsLog.TypeName != $"{nameof(DetailsLog)}")
 			{

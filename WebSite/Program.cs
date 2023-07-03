@@ -2,15 +2,14 @@ using Persistence.Settings;
 using Infrastructure.Extensions;
 using Microsoft.AspNetCore.Identity;
 using System.Text.Json.Serialization;
+using Infrastructure.Middlewares;
 
 var webApplicationOptions =
-	new Microsoft.AspNetCore.Builder.WebApplicationOptions
+	new WebApplicationOptions
 	{
 		EnvironmentName =
-			System.Diagnostics.Debugger.IsAttached ?
-			Microsoft.Extensions.Hosting.Environments.Development 
-			:
-			Microsoft.Extensions.Hosting.Environments.Production,
+			System.Diagnostics.Debugger.IsAttached
+				? Environments.Development : Environments.Production,
 	};
 
 var builder = WebApplication.CreateBuilder(options: webApplicationOptions);
@@ -58,12 +57,33 @@ var app = builder.Build();
 
 // app.ConfigureExceptionHandler();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+// IsDevelopment() -> using Microsoft.Extensions.Hosting;
+if (app.Environment.IsDevelopment())
 {
-	app.UseExceptionHandler("/Home/Error");
-	// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+	// **************************************************
+	// UseDeveloperExceptionPage() -> using Microsoft.AspNetCore.Builder;
+	app.UseDeveloperExceptionPage();
+	// **************************************************
+}
+else
+{
+	// **************************************************
+	// UseGlobalException() -> using Infrastructure.Middlewares;
+	app.UseGlobalException();
+	// **************************************************
+
+	// **************************************************
+	// UseExceptionHandler() -> using Microsoft.AspNetCore.Builder;
+	app.UseExceptionHandler("/Errors/Error");
+	// **************************************************
+
+	// **************************************************
+	// The default HSTS value is 30 days.
+	// You may want to change this for production scenarios,
+	// see https://aka.ms/aspnetcore-hsts
+	// UseHsts() -> using Microsoft.AspNetCore.Builder; 
 	app.UseHsts();
+	// **************************************************
 }
 
 app.UseHttpsRedirection();
@@ -72,6 +92,8 @@ app.UseStaticFiles();
 app.UseCors("CorsPolicy");
 
 app.UseRouting();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

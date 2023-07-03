@@ -11,6 +11,5 @@ public interface IUnitOfWork : Persistence.Base.IUnitOfWork
 
 	IPostRepository PostRepository { get; }
 
-	public IClientLogRepository ClientLogRepository { get; }
 	public IServerLogRepository ServerLogRepository { get; }
 }
