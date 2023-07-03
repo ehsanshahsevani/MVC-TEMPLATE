@@ -5,6 +5,7 @@ using Persistence;
 using Infrastructure.JWT;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 
 namespace Infrastructure.ApplicationControllers;
 
@@ -30,6 +31,8 @@ public abstract class BaseSiteController : Controller
 		UserManager = userManager;
 		RoleManager = roleManager;
 		SignInManager = signInManager;
+
+		HttpContextAccessor = httpContextAccessor;
 
 		if (httpContextAccessor is not null)
 		{
@@ -60,6 +63,8 @@ public abstract class BaseSiteController : Controller
 	protected UserManager<Domain.User> UserManager { get; }
 	protected RoleManager<Domain.Role> RoleManager { get; }
 	protected SignInManager<Domain.User> SignInManager { get; }
+	public IHttpContextAccessor HttpContextAccessor { get; }
+
 	// **************************************************
 
 	// **************************************************
@@ -107,22 +112,21 @@ public abstract class BaseSiteController : Controller
 	[NonAction]
 	public async Task SaveAsync()
 	{
-		var token = GetTokenDetail();
-
 		var date = DateTime.Now;
 
 		var detailsLog = new DetailsLog()
 		{
 			CreateDate = date,
 
-			UserId = token.UserId,
+			UserName = HttpContextAccessor.HttpContext?.User.Identity?.Name,
 
-			Token_JWT = token.Token,
+			UserId = Convert.ToInt32
+				(HttpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value),
 
 			RemoteIP = HttpContext.Connection.RemoteIpAddress?.ToString(),
 
 			PortIP = HttpContext.Connection.RemotePort.ToString(),
-			
+
 			HttpReferrer = HttpContext.Request.Headers["Referer"].ToString(),
 
 			IsDeleted = false,

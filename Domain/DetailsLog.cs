@@ -13,6 +13,8 @@ public class DetailsLog : Base.BaseEntity
 
 	public int UserId { get; set; }
 
+	public string? UserName { get; set; }
+
 	public int RecordId { get; set; }
 
 	public string? Token_JWT { get; set; }

@@ -21,7 +21,7 @@ public class HomeController
 	{
 	}
 
-	public IActionResult Index()
+	public async Task<IActionResult> Index()
 	{
 		// ***********************************
 
@@ -37,6 +37,27 @@ public class HomeController
 
 		ViewData[nameof(Test)] = Test;
 
+		// ***********************************
+
+		// ***********************************
+		// Test Database
+
+		var post = new Post
+		{
+			IsActive = true,
+			IsDeleted = false,
+			Title = "Title Test",
+			Text = "Text Test",
+			Description = "Description Test",
+		};
+
+		var anyPost = await UnitOfWork.PostRepository.GetAllAsync();
+
+		if (anyPost.Count() == 0)
+		{
+			await UnitOfWork.PostRepository.AddAsync(post);
+			await SaveAsync();
+		}
 		// ***********************************
 
 		return View();
