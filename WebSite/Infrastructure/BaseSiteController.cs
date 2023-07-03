@@ -3,22 +3,22 @@ using Utilities;
 using AutoMapper;
 using Persistence;
 using Infrastructure.JWT;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
-using System.Security.Claims;
 
-namespace Infrastructure.ApplicationControllers;
+namespace Infrastructure;
 
 public abstract class BaseSiteController : Controller
 {
-	#region constructor and props
+	#region Constructor AND Property
 	public BaseSiteController(IUnitOfWork unitOfWork,
 		IMapper mapper,
 		IConfiguration configuration,
 		IWebHostEnvironment env, HttpClient httpClient,
-		UserManager<Domain.User> userManager,
-		RoleManager<Domain.Role> roleManager,
-		SignInManager<Domain.User> signInManager,
+		UserManager<User> userManager,
+		RoleManager<Role> roleManager,
+		SignInManager<User> signInManager,
 		IHttpContextAccessor httpContextAccessor)
 	{
 		Mapper = mapper;
@@ -60,9 +60,9 @@ public abstract class BaseSiteController : Controller
 
 	// **************************************************
 	// identity
-	protected UserManager<Domain.User> UserManager { get; }
-	protected RoleManager<Domain.Role> RoleManager { get; }
-	protected SignInManager<Domain.User> SignInManager { get; }
+	protected UserManager<User> UserManager { get; }
+	protected RoleManager<Role> RoleManager { get; }
+	protected SignInManager<User> SignInManager { get; }
 	public IHttpContextAccessor HttpContextAccessor { get; }
 
 	// **************************************************
@@ -72,7 +72,7 @@ public abstract class BaseSiteController : Controller
 	// **************************************************
 	#endregion
 
-	#region functions
+	#region Functions
 	// overload
 	// **************************************************
 	//[NonAction]

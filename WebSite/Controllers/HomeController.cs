@@ -6,11 +6,11 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
+using Infrastructure;
 
 namespace WebSite.Controllers;
 
-public class HomeController
-	: Infrastructure.ApplicationControllers.BaseSiteController
+public class HomeController : BaseSiteController
 {
 	public HomeController(IUnitOfWork unitOfWork, IMapper mapper,
 		IConfiguration configuration, IWebHostEnvironment env, HttpClient httpClient,
@@ -51,9 +51,9 @@ public class HomeController
 			Description = "Description Test",
 		};
 
-		var anyPost = await UnitOfWork.PostRepository.GetAllAsync();
+		var posts = await UnitOfWork.PostRepository.GetAllAsync();
 
-		if (anyPost.Count() == 0)
+		if (posts.Count() == 0)
 		{
 			await UnitOfWork.PostRepository.AddAsync(post);
 			await SaveAsync();

@@ -1,8 +1,8 @@
+using Infrastructure;
 using Persistence.Settings;
-using Infrastructure.Extensions;
+using Infrastructure.Middlewares;
 using Microsoft.AspNetCore.Identity;
 using System.Text.Json.Serialization;
-using Infrastructure.Middlewares;
 
 var webApplicationOptions =
 	new WebApplicationOptions
