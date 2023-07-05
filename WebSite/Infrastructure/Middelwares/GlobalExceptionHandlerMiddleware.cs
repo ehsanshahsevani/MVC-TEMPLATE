@@ -33,9 +33,6 @@ namespace Infrastructure.Middlewares
 
 				var message = stringBuilder.ToString();
 
-				dynamic features = httpContext.Features;
-				var featuresVar = httpContext.Features;
-
 				ControllerActionDescriptor?
 					controllerActionDescriptor =
 						httpContext.GetEndpoint()?.Metadata
