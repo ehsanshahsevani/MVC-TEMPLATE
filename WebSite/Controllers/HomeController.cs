@@ -1,12 +1,11 @@
 ﻿using Domain;
 using AutoMapper;
 using Persistence;
-using WebSite.Models;
+using Infrastructure;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
-using Infrastructure;
 
 namespace WebSite.Controllers;
 
