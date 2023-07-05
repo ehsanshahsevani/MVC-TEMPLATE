@@ -1,41 +1,42 @@
 {
-	"version": "1.0",
-	"defaultProvider": "cdnjs",
-	"libraries": [
-		{
-			"library": "bootstrap@5.3.0",
-			"destination": "wwwroot/lib/bootstrap/"
-		},
-		{
-			"library": "bootstrap-icons@1.8.1",
-			"destination": "wwwroot/lib/bootstrap-icons/"
-		},
-
-		{
-			"library": "jquery@3.6.0",
-			"destination": "wwwroot/lib/jquery/"
-		},
-		{
-			"library": "jquery-validate@1.19.3",
-			"destination": "wwwroot/lib/jquery-validate/"
-		},
-		{
-			"library": "jquery-validation-unobtrusive@3.2.12",
-			"destination": "wwwroot/lib/jquery-validation-unobtrusive/"
-		},
-
-		{
-			"library": "toastr.js@2.1.4",
-			"destination": "wwwroot/lib/toastr/"
-		},
-		{
-			"library": "tinymce@6.5.1",
-			"destination": "wwwroot/lib/tinymce/"
-		},
-
-		{
-			"library": "flag-icon-css@4.1.5",
-			"destination": "wwwroot/lib/flag-icon-css/"
-		}
-	]
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "bootstrap@5.3.0",
+      "destination": "wwwroot/lib/bootstrap/"
+    },
+    {
+      "library": "bootstrap-icons@1.8.1",
+      "destination": "wwwroot/lib/bootstrap-icons/"
+    },
+    {
+      "library": "jquery@3.6.0",
+      "destination": "wwwroot/lib/jquery/"
+    },
+    {
+      "library": "jquery-validate@1.19.3",
+      "destination": "wwwroot/lib/jquery-validate/"
+    },
+    {
+      "library": "jquery-validation-unobtrusive@3.2.12",
+      "destination": "wwwroot/lib/jquery-validation-unobtrusive/"
+    },
+    {
+      "library": "toastr.js@2.1.4",
+      "destination": "wwwroot/lib/toastr/"
+    },
+    {
+      "library": "tinymce@6.5.1",
+      "destination": "wwwroot/lib/tinymce/"
+    },
+    {
+      "library": "flag-icon-css@4.1.5",
+      "destination": "wwwroot/lib/flag-icon-css/"
+    },
+    {
+      "library": "axios@1.4.0",
+      "destination": "wwwroot/lib/axios/"
+    }
+  ]
 }
