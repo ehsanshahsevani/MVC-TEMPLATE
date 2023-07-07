@@ -42,8 +42,8 @@ namespace Infrastructure.Middlewares
 				{
 					Message = message,
 					IsDeleted = false,
-					CreateDate = DateTime.Now,
 					Exceptions = ex.ToString(),
+					InsertDateTime = DateTime.Now,
 					RequestPath = httpContext.Request.Path,
 
 					Description =
