@@ -116,8 +116,6 @@ public abstract class BaseSiteController : Controller
 
 		var detailsLog = new DetailsLog()
 		{
-			InsertDateTime = date,
-
 			UserName = HttpContextAccessor.HttpContext?.User.Identity?.Name,
 
 			UserId = Convert.ToInt32
