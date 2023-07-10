@@ -117,16 +117,73 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="1" xml:space="preserve">
-    <value>عملکرد نادرست</value>
+  <data name="Back" xml:space="preserve">
+    <value>بازگشت</value>
   </data>
-  <data name="2" xml:space="preserve">
-    <value>درخواست جدید</value>
+  <data name="BackToList" xml:space="preserve">
+    <value>بازگشت به فهرست</value>
   </data>
-  <data name="3" xml:space="preserve">
-    <value>بروز خطا</value>
+  <data name="Cancel" xml:space="preserve">
+    <value>منصرف شدم</value>
   </data>
-  <data name="4" xml:space="preserve">
-    <value>دیگر</value>
+  <data name="ConfirmDelete" xml:space="preserve">
+    <value>تایید حذف</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>ایجاد</value>
+  </data>
+  <data name="CreateNew" xml:space="preserve">
+    <value>ایجاد {0} جدید</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>جزئیات</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>ویرایش</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>فراموشی گذرواژه</value>
+  </data>
+  <data name="ForgotUsername" xml:space="preserve">
+    <value>فراموشی شناسه‌کاربری</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>خانه</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>ورود</value>
+  </data>
+  <data name="LoginWithGoogle" xml:space="preserve">
+    <value>ورود از طریق گوگل</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>بعدی</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>خیر</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>قبلی</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>ثبت‌نام</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>حالت اولیه</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>ذخیره</value>
+  </data>
+  <data name="SendAgainEmailAddressVerificationKey" xml:space="preserve">
+    <value>ارسال مجدد کد تایید نشانی پست الکترونیکی</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>ویرایش</value>
+  </data>
+  <data name="UpdateInformationsAgain" xml:space="preserve">
+    <value>مجددا اطلاعات را بروز نمایید</value>
   </data>
 </root>

@@ -14,15 +14,15 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<Compile Update="ButtonCaptions.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>ButtonCaptions.resx</DependentUpon>
+		</Compile>
 		<Compile Update="DataDictionary.Designer.cs">
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
 			<DependentUpon>DataDictionary.resx</DependentUpon>
-		</Compile>
-		<Compile Update="InitialData\DefaultGroup.Designer.cs">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>DefaultGroup.resx</DependentUpon>
 		</Compile>
 		<Compile Update="InitialData\PageIcon.Designer.cs">
 			<DesignTime>True</DesignTime>
@@ -49,35 +49,15 @@
 			<AutoGen>True</AutoGen>
 			<DependentUpon>PermissionTitles.resx</DependentUpon>
 		</Compile>
-		<Compile Update="InitialData\ReferenceTickets.Designer.cs">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>ReferenceTickets.resx</DependentUpon>
-		</Compile>
-		<Compile Update="InitialData\ReferenceTypes.Designer.cs">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>ReferenceTypes.resx</DependentUpon>
-		</Compile>
 		<Compile Update="InitialData\Roles.Designer.cs">
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
 			<DependentUpon>Roles.resx</DependentUpon>
 		</Compile>
-		<Compile Update="InitialData\StatusTickets.Designer.cs">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>StatusTickets.resx</DependentUpon>
-		</Compile>
-		<Compile Update="InitialData\TicketTypes.Designer.cs">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>TicketTypes.resx</DependentUpon>
-		</Compile>
-		<Compile Update="InitialData\UserPriotries.Designer.cs">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>UserPriotries.resx</DependentUpon>
+		<Compile Update="PageTitles.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>PageTitles.resx</DependentUpon>
 		</Compile>
 		<Compile Update="Policies.Designer.cs">
 			<DesignTime>True</DesignTime>
@@ -87,13 +67,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<EmbeddedResource Update="ButtonCaptions.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>ButtonCaptions.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
 		<EmbeddedResource Update="DataDictionary.resx">
 			<Generator>PublicResXFileCodeGenerator</Generator>
 			<LastGenOutput>DataDictionary.Designer.cs</LastGenOutput>
-		</EmbeddedResource>
-		<EmbeddedResource Update="InitialData\DefaultGroup.resx">
-			<Generator>PublicResXFileCodeGenerator</Generator>
-			<LastGenOutput>DefaultGroup.Designer.cs</LastGenOutput>
 		</EmbeddedResource>
 		<EmbeddedResource Update="InitialData\PageIcon.resx">
 			<Generator>PublicResXFileCodeGenerator</Generator>
@@ -115,29 +95,13 @@
 			<Generator>PublicResXFileCodeGenerator</Generator>
 			<LastGenOutput>PermissionTitles.Designer.cs</LastGenOutput>
 		</EmbeddedResource>
-		<EmbeddedResource Update="InitialData\ReferenceTickets.resx">
-			<Generator>PublicResXFileCodeGenerator</Generator>
-			<LastGenOutput>ReferenceTickets.Designer.cs</LastGenOutput>
-		</EmbeddedResource>
-		<EmbeddedResource Update="InitialData\ReferenceTypes.resx">
-			<Generator>PublicResXFileCodeGenerator</Generator>
-			<LastGenOutput>ReferenceTypes.Designer.cs</LastGenOutput>
-		</EmbeddedResource>
 		<EmbeddedResource Update="InitialData\Roles.resx">
 			<Generator>PublicResXFileCodeGenerator</Generator>
 			<LastGenOutput>Roles.Designer.cs</LastGenOutput>
 		</EmbeddedResource>
-		<EmbeddedResource Update="InitialData\StatusTickets.resx">
-			<Generator>PublicResXFileCodeGenerator</Generator>
-			<LastGenOutput>StatusTickets.Designer.cs</LastGenOutput>
-		</EmbeddedResource>
-		<EmbeddedResource Update="InitialData\TicketTypes.resx">
-			<Generator>PublicResXFileCodeGenerator</Generator>
-			<LastGenOutput>TicketTypes.Designer.cs</LastGenOutput>
-		</EmbeddedResource>
-		<EmbeddedResource Update="InitialData\UserPriotries.resx">
-			<Generator>PublicResXFileCodeGenerator</Generator>
-			<LastGenOutput>UserPriotries.Designer.cs</LastGenOutput>
+		<EmbeddedResource Update="PageTitles.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>PageTitles.Designer.cs</LastGenOutput>
 		</EmbeddedResource>
 		<EmbeddedResource Update="Policies.resx">
 			<Generator>PublicResXFileCodeGenerator</Generator>
